@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Staff and job Titles</h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Job Title</th>
+          <td>Operations</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of staffs">
+          <td>{{ staff._id }}</td>
+          <td>{{ staff.name }}</td>
+          <td>{{ staff.job }}</td>
+
+          <td>
+            <button class="btn btn-danger" (click)="toDelete(staff)">
+              Delete
+            </button>
+            <button class="btn btn-primary" (click)="toUpdate(staff)">
+              Update
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
